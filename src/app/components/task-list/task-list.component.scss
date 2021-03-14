@@ -1,0 +1,29 @@
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  > div {
+    flex: 1;
+  }
+  .task-item__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  input {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
+}
+
+.delete-btn {
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  background: hotpink !important;
+  padding: 0;
+  margin-left: 10px;
+}

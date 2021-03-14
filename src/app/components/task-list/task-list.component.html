@@ -1,0 +1,8 @@
+<div class="task-item" *ngFor="let task of tasks;trackBy: trackByFn">
+  <div>
+    <div class="task-item__title">{{task.title}}</div>
+    <p>{{task.content}}</p>
+  </div>
+  <input type="checkbox" [checked]="task.done" [disabled]="task.done" (change)="onFinish(task.id)">
+  <button class="delete-btn" (click)="onDelete(task.id)">x</button>
+</div>

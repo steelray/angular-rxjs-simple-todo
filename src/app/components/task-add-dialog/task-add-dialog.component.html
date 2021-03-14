@@ -1,0 +1,8 @@
+<div class="content">
+  <h2>Add new task</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" [formControl]="form.get('title')" placeholder="Title">
+    <textarea rows="6" [formControl]="form.get('content')" placeholder="Content"></textarea>
+    <button type="submit" [class.disabled]="form.invalid">Add</button>
+  </form>
+</div>

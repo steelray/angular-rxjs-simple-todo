@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  outline: 0;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  background: #f6f6f6;
+  color: #454545;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+textarea {
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  &:focus {
+    border-color: green;
+  }
+  &.ng-touched.ng-invalid {
+    border-color: red;
+  }
+}
+textarea {
+  padding: 10px;
+}
+input {
+  padding: 0 10px;
+  height: 42px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: orange;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 22px;
+  &:not(.disabled) {
+    &:hover {
+      background: rgb(255, 169, 10);
+    }
+    &:active {
+      background: rgb(226, 148, 4);
+    }
+  }
+  &.disabled {
+    background: #ccc;
+  }
+}

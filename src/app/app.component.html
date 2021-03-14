@@ -1,0 +1,10 @@
+<header>
+  <input type="text" placeholder="search..." [formControl]="searchControl">
+  <button class="add-task-btn" (click)="onAdd()">+</button>
+</header>
+<app-task-list
+  [tasks]="filteredTasks"
+  (delete)="onDelete($event)"
+  (finish)="onFinish($event)"></app-task-list>
+
+<app-task-add-dialog *ngIf="addDialogIsActive" (add)="addNewTask($event)"></app-task-add-dialog>
